@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+		 xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>org.springframework.boot</groupId>
+		<artifactId>spring-boot-starter-parent</artifactId>
+		<version>2.1.6.RELEASE</version>
+		<relativePath/> <!-- lookup parent from repository -->
+	</parent>
+	<groupId>com.eaststream</groupId>
+	<artifactId>easystream-spring-boot-starter</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<name>easystream-spring-boot-starter</name>
+	<description>Demo project for Spring Boot</description>
+
+	<properties>
+		<skipTests>true</skipTests>
+		<java.version>1.8</java.version>
+		<slf4j.version>1.7.10</slf4j.version>
+		<log4j.version>2.13.3</log4j.version>
+		<springboot.version>2.1.6.RELEASE</springboot.version>
+	</properties>
+	<dependencyManagement>
+		<dependencies>
+			<dependency>
+				<!-- Import dependency management from Spring Boot -->
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-dependencies</artifactId>
+				<version>${springboot.version}</version>
+				<type>pom</type>
+				<scope>import</scope>
+			</dependency>
+		</dependencies>
+	</dependencyManagement>
+
+	<dependencies>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-test</artifactId>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-configuration-processor</artifactId>
+			<optional>true</optional>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-autoconfigure</artifactId>
+		</dependency>
+		<!--ffmpeg-->
+		<dependency>
+			<groupId>org.bytedeco</groupId>
+			<artifactId>javacv</artifactId>
+			<version>1.5.1</version>
+		</dependency>
+		<dependency>
+			<groupId>org.bytedeco</groupId>
+			<artifactId>ffmpeg-platform</artifactId>
+			<version>4.1.3-1.5.1</version>
+			<!--<version>4.2.1-1.5.2</version>-->
+		</dependency>
+		<!-- log4j2 -->
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>slf4j-api</artifactId>
+			<version>${slf4j.version}</version>
+		</dependency>
+		<!--alibaba的fastjson-->
+		<dependency>
+			<groupId>com.alibaba</groupId>
+			<artifactId>fastjson</artifactId>
+			<version>1.2.58</version>
+		</dependency>
+	</dependencies>
+
+	<!--<build>-->
+		<!--<resources>-->
+			<!--<resource>-->
+				<!--<directory>src/main/resources</directory>-->
+				<!--<filtering>true</filtering>-->
+				<!--<includes>-->
+					<!--<include>**/*.*</include>-->
+				<!--</includes>-->
+			<!--</resource>-->
+		<!--</resources>-->
+
+		<!--&lt;!&ndash;<testResources>&ndash;&gt;-->
+			<!--&lt;!&ndash;<testResource>&ndash;&gt;-->
+				<!--&lt;!&ndash;<directory>src/test/resources</directory>&ndash;&gt;-->
+			<!--&lt;!&ndash;</testResource>&ndash;&gt;-->
+			<!--&lt;!&ndash;<testResource>&ndash;&gt;-->
+				<!--&lt;!&ndash;<directory>src/main/resources</directory>&ndash;&gt;-->
+			<!--&lt;!&ndash;</testResource>&ndash;&gt;-->
+		<!--&lt;!&ndash;</testResources>&ndash;&gt;-->
+
+		<!--<plugins>-->
+			<!--<plugin>-->
+				<!--<groupId>org.springframework.boot</groupId>-->
+				<!--<artifactId>spring-boot-maven-plugin</artifactId>-->
+			<!--</plugin>-->
+			<!--<plugin>-->
+				<!--<groupId>org.apache.maven.plugins</groupId>-->
+				<!--<artifactId>maven-surefire-plugin</artifactId>-->
+				<!--<version>2.18.1</version>-->
+				<!--<configuration>-->
+					<!--<skipTests>true</skipTests>-->
+				<!--</configuration>-->
+			<!--</plugin>-->
+			<!--<plugin>-->
+				<!--<artifactId>maven-deploy-plugin</artifactId>-->
+				<!--<configuration>-->
+					<!--<skip>true</skip>-->
+				<!--</configuration>-->
+			<!--</plugin>-->
+		<!--</plugins>-->
+	<!--</build>-->
+
+</project>

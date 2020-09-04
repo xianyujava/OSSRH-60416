@@ -1,0 +1,17 @@
+
+easystream:
+  push_host: 192.168.200.2
+  #直播流保活时间(分钟)
+  keepalive: 1
+  #额外推送地址
+  host_extra: 127.0.0.1
+  #nginx推送端口
+  push_port: 1935
+  #主码流最大码率
+  main_code: 5120
+  #子码流最大码率
+  sub_code: 1024
+  #1nvr,2,合成服务
+  rtsptype: 1
+  #nginx视频流访问端口
+  access_port: 8085
